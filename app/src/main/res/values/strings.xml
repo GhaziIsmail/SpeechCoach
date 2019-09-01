@@ -25,4 +25,14 @@
     <string name="txt_neutral">Neutral</string>
     <string name="txt_Neutral_perc">25%</string>
     <string name="txt_fear_perc">10%</string>
+    <string name="txt_speech_heading">Speech</string>
+    <string name="txt_pace">Pace</string>
+    <string name="txt_pace_percentage">65%</string>
+    <string name="txt_pacePara_1">Overall ,at</string>
+    <string name="txt_fillerword_percentage">20%</string>
+    <string name="txt_ratingFeedback">7.2</string>
+    <string name="btn_transcript_feedback">Transcript</string>
+    <string name="txt_pace_rate">120</string>
+    <string name="txt_words_per_minute">words per minute</string>
+    <string name="txt_filler_word_usage_at">Filler word usage at</string>
 </resources>
