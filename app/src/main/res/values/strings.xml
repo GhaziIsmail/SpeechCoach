@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Speech Coach</string>
+    <string name="btn_go">GO</string>
+    <string name="btn_check_feedbacks">Check Feedbacks</string>
+    <string name="score">7.1</string>
+    <string name="rating">Rating</string>
+    <string name="txt_feed_date">2019-09-30 11:11</string>
+    <string name="txt_feed_score">7.2</string>
+    <string name="btn_feed_remove">X</string>
+    <string name="bad_poses_txt">Bad poses</string>
+    <string name="badPose_percentage">25%</string>
+    <string name="bad_poses">Good poses</string>
+    <string name="goodPose_percentage">75%</string>
+    <string name="pose_analysis_txt">Pose Analysis</string>
+    <string name="pose_textField">Overall Poses perfomed by you</string>
+    <string name="txt_heading_emotions">Emotions</string>
+    <string name="txt_emotion_para">Overall Emotions that you have expressed</string>
+    <string name="txt_sad_perc">20%</string>
+    <string name="txt_anger">Anger</string>
+    <string name="txt_sad">Sad</string>
+    <string name="txt_fear">Fear</string>
+    <string name="txt_anger_perc">10%</string>
+    <string name="txt_happy">Happy</string>
+    <string name="txt_happy_perc">35%</string>
+    <string name="txt_neutral">Neutral</string>
+    <string name="txt_Neutral_perc">25%</string>
+    <string name="txt_fear_perc">10%</string>
+</resources>

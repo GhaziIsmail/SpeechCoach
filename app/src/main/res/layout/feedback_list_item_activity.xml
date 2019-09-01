@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:divider="#192943"
+    android:dividerHeight="2dp"
+    android:padding="10dp">
+
+
+
+    <LinearLayout
+        android:layout_width="420dp"
+        android:layout_height="67dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/btn_viewFeedBack"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:contentDescription="TODO"
+            android:src="@drawable/feedbackicon_3" />
+
+        <TextView
+            android:id="@+id/txt_FeedBack_Date"
+            android:layout_width="258dp"
+            android:layout_height="match_parent"
+            android:fontFamily="monospace"
+            android:padding="16dp"
+            android:text="@string/txt_feed_date"
+            android:textAlignment="center"
+            android:textColor="#192943"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+
+        <LinearLayout
+            android:layout_width="102dp"
+            android:layout_height="67dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/txt_feedBack_score"
+                android:layout_width="80dp"
+                android:layout_height="32dp"
+                android:fontFamily="sans-serif-black"
+
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textColor="#009EFD"/>
+        <ProgressBar
+            android:id="@+id/feedback_listItem_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="102dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/feedback_1"
+            android:layout_alignParentEnd="true"
+            android:indeterminateDrawable="@drawable/feedback_progress_bar"
+            android:progress="100"
+            android:progressTint="#009EFD"
+            android:secondaryProgressTint="@color/colorPrimary" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

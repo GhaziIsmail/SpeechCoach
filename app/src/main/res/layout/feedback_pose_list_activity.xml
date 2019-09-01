@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:divider="#192943"
+    android:dividerHeight="2dp"
+    android:padding="10dp">
+
+
+    <LinearLayout
+        android:layout_width="420dp"
+        android:layout_height="448dp"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_PoseAnalysis_heading"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/pose_analysis_txt"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="24sp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_PoseAnalysis_para"
+                android:layout_width="401dp"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-black"
+
+                android:text="@string/pose_textField"
+                android:textAlignment="textStart"
+                android:textColor="#009EFD"
+                android:textSize="24sp"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_PoseAnalysis_BadPose"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/bad_poses_txt"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold|italic" />
+
+            <Button
+                android:id="@+id/PercentageButton_BadPose"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:indeterminateDrawable="@drawable/custombutton_percentage"
+                android:text="@string/badPose_percentage" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/List_BadPose"
+            android:layout_width="200dp"
+            android:layout_height="121dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_PoseAnalysis_GoodPose"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/bad_poses"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold|italic" />
+
+            <Button
+                android:id="@+id/PercentageButton_GoodPose"
+                android:layout_width="95dp"
+                android:layout_height="match_parent"
+                android:indeterminateDrawable="@drawable/custombutton_percentage"
+                android:text="@string/goodPose_percentage" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/List_GoodPose"
+            android:layout_width="200dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+
+</LinearLayout>
