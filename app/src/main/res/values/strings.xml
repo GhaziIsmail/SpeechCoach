@@ -7,9 +7,9 @@
     <string name="txt_feed_date">2019-09-30 11:11</string>
     <string name="txt_feed_score">7.2</string>
     <string name="btn_feed_remove">X</string>
-    <string name="bad_poses_txt">Bad poses</string>
+    <string name="bad_poses_txt">Bad Poses</string>
     <string name="badPose_percentage">25%</string>
-    <string name="bad_poses">Good poses</string>
+    <string name="bad_poses">Good Poses</string>
     <string name="goodPose_percentage">75%</string>
     <string name="pose_analysis_txt">Pose Analysis</string>
     <string name="pose_textField">Overall Poses perfomed by you</string>
@@ -28,7 +28,7 @@
     <string name="txt_speech_heading">Speech</string>
     <string name="txt_pace">Pace</string>
     <string name="txt_pace_percentage">65%</string>
-    <string name="txt_pacePara_1">Overall ,at</string>
+    <string name="txt_pacePara_1">Overall, at</string>
     <string name="txt_fillerword_percentage">20%</string>
     <string name="txt_ratingFeedback">7.2</string>
     <string name="btn_transcript_feedback">Transcript</string>

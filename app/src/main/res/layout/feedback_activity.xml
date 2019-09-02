@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,18 +8,20 @@
     android:background="@android:color/white">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="466dp"
         android:layout_below="@+id/progressBar"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="265dp"
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="43dp"
         android:orientation="horizontal"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -32,11 +34,12 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="350dp"
+                    android:layout_width="330dp"
                     android:layout_height="448dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/custom_scroll_view"
-                    android:orientation="vertical"
-                    android:layout_marginStart="10dp">
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/txt_PoseAnalysis_heading"
@@ -50,7 +53,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="65dp"
+                        android:layout_height="40dp"
                         android:background="@color/colorPrimary"
                         android:orientation="vertical">
 
@@ -63,14 +66,14 @@
                             android:text="@string/pose_textField"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimaryDark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
 
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="40dp"
                         android:background="@color/colorPrimary"
                         android:orientation="horizontal">
 
@@ -83,7 +86,7 @@
                             android:text="@string/bad_poses_txt"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimaryDark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
 
                         <TextView
@@ -93,12 +96,12 @@
                             android:text="@string/badPose_percentage"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/holo_orange_dark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
 
                     </LinearLayout>
 
-                   <!-- <ListView
+                    <!-- <ListView
                         android:id="@+id/List_BadPose"
                         android:layout_width="200dp"
                         android:layout_height="121dp"
@@ -106,7 +109,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="40dp"
                         android:background="@color/colorPrimary"
                         android:orientation="horizontal">
 
@@ -114,12 +117,12 @@
                             android:id="@+id/txt_PoseAnalysis_GoodPose"
                             android:layout_width="200dp"
                             android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
                             android:fontFamily="sans-serif-black"
                             android:text="@string/bad_poses"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimaryDark"
-                            android:textSize="24sp"
-                            android:layout_marginStart="10dp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
 
                         <TextView
@@ -129,12 +132,42 @@
                             android:text="@string/goodPose_percentage"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/holo_orange_dark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/colorPrimary"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_PoseAnalysis_NeutralPose"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="Neutral Poses"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/txt_Percentage_NeutralPose"
+                            android:layout_width="95dp"
+                            android:layout_height="match_parent"
+                            android:text="35%"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
 
                     </LinearLayout>
 
-                   <!-- <ListView
+
+                    <!-- <ListView
                         android:id="@+id/List_GoodPos"
                         android:layout_width="200dp"
                         android:layout_height="match_parent"
@@ -145,12 +178,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="350dp"
+                    android:layout_width="330dp"
                     android:layout_height="448dp"
-                    android:background="@drawable/custom_scroll_view"
-                    android:orientation="vertical"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginStart="10dp">
+                    android:background="@drawable/custom_scroll_view"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/txt_EmotionAnalysis_heading"
@@ -160,7 +193,7 @@
                         android:fontFamily="sans-serif-medium"
                         android:text="@string/txt_heading_emotions"
                         android:textColor="#66F980"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold"></TextView>
 
                     <LinearLayout
@@ -173,12 +206,12 @@
                             android:id="@+id/txt_PoseAnalysis_par"
                             android:layout_width="400dp"
                             android:layout_height="match_parent"
-                            android:fontFamily="sans-serif-black"
                             android:layout_marginStart="10dp"
+                            android:fontFamily="sans-serif-black"
                             android:text="@string/txt_emotion_para"
                             android:textAlignment="textStart"
                             android:textColor="@color/colorPrimaryDark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
 
                     </LinearLayout>
@@ -197,7 +230,7 @@
                             android:text="@string/txt_anger"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimaryDark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
 
                         <TextView
@@ -208,7 +241,7 @@
                             android:text="@string/txt_anger_perc"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/holo_orange_dark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
                     </LinearLayout>
 
@@ -226,7 +259,7 @@
                             android:text="@string/txt_sad"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimaryDark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
 
                         <TextView
@@ -237,7 +270,7 @@
                             android:text="@string/txt_sad_perc"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/holo_orange_dark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
                     </LinearLayout>
 
@@ -255,7 +288,7 @@
                             android:text="@string/txt_fear"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimaryDark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
 
                         <TextView
@@ -266,7 +299,7 @@
                             android:text="@string/txt_anger_perc"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/holo_orange_dark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
                     </LinearLayout>
 
@@ -284,7 +317,7 @@
                             android:text="@string/txt_happy"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimaryDark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
 
                         <TextView
@@ -295,7 +328,7 @@
                             android:text="@string/txt_happy_perc"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/holo_orange_dark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
                     </LinearLayout>
 
@@ -313,7 +346,7 @@
                             android:text="@string/txt_neutral"
                             android:textAlignment="center"
                             android:textColor="@color/colorPrimaryDark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
 
                         <TextView
@@ -324,132 +357,133 @@
                             android:text="@string/txt_Neutral_perc"
                             android:textAlignment="textStart"
                             android:textColor="@android:color/holo_orange_dark"
-                            android:textSize="24sp"
+                            android:textSize="20sp"
                             android:textStyle="bold|italic" />
                     </LinearLayout>
                 </LinearLayout>
-                <LinearLayout
-                android:layout_width="350dp"
-                android:layout_height="448dp"
-                android:background="@drawable/custom_scroll_view"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp">
-
-                <TextView
-                    android:id="@+id/txt_SpeechAnalysis_heading"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="5dp"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="@string/txt_speech_heading"
-                    android:textColor="#66F980"
-                    android:textSize="24sp"
-                    android:textStyle="bold"></TextView>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="65dp"
-                    android:background="@color/colorPrimary"
-                    android:orientation="horizontal">
+                    android:layout_width="330dp"
+                    android:layout_height="448dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_scroll_view"
+                    android:orientation="vertical">
+
                     <TextView
-                        android:id="@+id/txt_Pace"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:fontFamily="sans-serif-black"
-                        android:text="@string/txt_pace"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:id="@+id/txt_SpeechAnalysis_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="@string/txt_speech_heading"
+                        android:textColor="#66F980"
                         android:textSize="24sp"
-                        android:textStyle="bold|italic" />
+                        android:textStyle="bold"></TextView>
 
-                    <TextView
-                        android:id="@+id/txt_Pace_percentage"
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:fontFamily="sans-serif-black"
-                        android:text="@string/txt_pace_percentage"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/holo_orange_dark"
-                        android:textSize="24sp"
-                        android:textStyle="bold|italic" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:background="@color/colorPrimary"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_Pace"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/txt_pace"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
+
+                        <TextView
+                            android:id="@+id/txt_Pace_percentage"
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/txt_pace_percentage"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
 
 
+                    </LinearLayout>
 
-                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@color/colorPrimary"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@color/colorPrimary"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_Pace_par"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/txt_pacePara_1"
+                            android:textAlignment="center"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
 
-                    <TextView
-                        android:id="@+id/txt_Pace_par"
-                        android:layout_width="120dp"
-                        android:layout_height="match_parent"
-                        android:fontFamily="sans-serif-black"
-                        android:text="@string/txt_pacePara_1"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="22sp"
-                        android:textStyle="bold|italic" />
+                        <TextView
+                            android:id="@+id/txt_Pace_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="4dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/txt_pace_rate"
+                            android:textColor="@android:color/holo_blue_dark"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
 
-                    <TextView
-                        android:id="@+id/txt_Pace_rate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:fontFamily="sans-serif-black"
-                        android:text="@string/txt_pace_rate"
-                        android:layout_marginEnd="4dp"
-                        android:textColor="@android:color/holo_blue_dark"
-                        android:textSize="22sp"
-                        android:textStyle="bold|italic" />
+                        <TextView
+                            android:id="@+id/txt_Pace_par2"
+                            android:layout_width="170dp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/txt_words_per_minute"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
 
-                    <TextView
-                        android:id="@+id/txt_Pace_par2"
-                        android:layout_width="170dp"
-                        android:layout_height="match_parent"
-                        android:fontFamily="sans-serif-black"
-                        android:text="@string/txt_words_per_minute"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="22sp"
-                        android:textStyle="bold|italic" />
+                    </LinearLayout>
 
-                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@color/colorPrimary"
+                        android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@color/colorPrimary"
-                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/txt_speechFillerWords"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="@string/txt_filler_word_usage_at"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
 
-                    <TextView
-                        android:id="@+id/txt_speechFillerWords"
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:fontFamily="sans-serif-black"
-                        android:text="@string/txt_filler_word_usage_at"
-                        android:textAlignment="textStart"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="22sp"
-                        android:textStyle="bold|italic" />
+                        <TextView
+                            android:id="@+id/txt_speechFillerWords_perc"
+                            android:layout_width="95dp"
+                            android:layout_height="match_parent"
+                            android:text="@string/txt_fillerword_percentage"
+                            android:textAlignment="textStart"
+                            android:textColor="@android:color/holo_orange_dark"
+                            android:textSize="20sp"
+                            android:textStyle="bold|italic" />
 
-                    <TextView
-                        android:id="@+id/txt_speechFillerWords_perc"
-                        android:layout_width="95dp"
-                        android:layout_height="match_parent"
-                        android:text="@string/txt_fillerword_percentage"
-                        android:textAlignment="textStart"
-                        android:textColor="@android:color/holo_orange_dark"
-                        android:textSize="24sp"
-                        android:textStyle="bold|italic" />
+                    </LinearLayout>
 
-                </LinearLayout>
-
-                <!--<ListView
+                    <!--<ListView
                     android:id="@+id/List_Fillerwords"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
@@ -457,8 +491,7 @@
                     android:layout_marginStart="10dp"/> -->
 
 
-
-              </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
 
         </ScrollView>
@@ -479,12 +512,16 @@
         android:id="@+id/progressBar"
         android:layout_width="140dp"
         android:layout_height="140dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="259dp"
         android:indeterminateDrawable="@drawable/feedback_score_bar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -594,13 +631,13 @@
         android:layout_height="60dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="81dp"
-        android:layout_marginEnd="29dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/custombutton_shape2"
         android:text="@string/btn_transcript_feedback"
         android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="116dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
  <!--   <TextView
         android:id="@+id/textView"
@@ -661,15 +698,16 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/progressBar"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginTop="48dp"
         android:text="@string/txt_ratingFeedback"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/progressBar"
-        tools:layout_editor_absoluteY="116dp" />
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="@+id/progressBar"
+        app:layout_constraintTop_toTopOf="@+id/progressBar" />
 
    <!-- <ListView
         android:id="@+id/feedBack_speech"
@@ -709,4 +747,4 @@
 
     </ListView> -->
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
