@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".FeedBackList">
-
+<!--
     <ListView
         android:id="@+id/list_Feedbacks"
         android:layout_width="match_parent"
@@ -12,6 +12,10 @@
         android:divider="#192943"
         android:dividerHeight="2dp">
 
-    </ListView>
+    </ListView>-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
-</LinearLayout>
+</RelativeLayout>

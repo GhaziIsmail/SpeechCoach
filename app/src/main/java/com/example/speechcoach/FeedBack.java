@@ -1,11 +1,8 @@
 package com.example.speechcoach;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ListView;
 import android.widget.Toast;
 
 public class FeedBack extends AppCompatActivity {
@@ -32,7 +29,6 @@ public class FeedBack extends AppCompatActivity {
                 FeedBack_PoseList_Adapter poseAdapter=new FeedBack_PoseList_Adapter(this,badPosePercentage,goodPosePercentage,BadPoseList,GoodPoseList);
                 poseAnalysis_List.setAdapter(poseAdapter);*/
             }
-
             //Toast.makeText(this,"in fragment 2 "+id,Toast.LENGTH_LONG).show();
 
         }
